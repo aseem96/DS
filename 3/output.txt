@@ -1,0 +1,28 @@
+Terminal 1
+
+➜  ~ cd 3
+➜  3 javac *.java
+➜  3 rmic ConcatRemote 
+Warning: generation and use of skeletons and static stubs for JRMP
+is deprecated. Skeletons are unnecessary, and static stubs have
+been superseded by dynamically generated stubs. Users are
+encouraged to migrate away from using rmic to generate skeletons and static
+stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+➜  3 rmiregistry 5001
+
+Terminal 2
+
+➜  ~ cd 3
+➜  3 javac MyServer.java 
+➜  3 java MyServer 
+
+Terminal 3
+
+➜  ~ cd 3
+➜  3 javac Client.java 
+➜  3 java Client 
+GoodMorning
+➜  3 
+
+
+

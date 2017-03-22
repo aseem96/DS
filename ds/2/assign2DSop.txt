@@ -1,0 +1,21 @@
+shivkumar@WinDroidX:~/Desktop/ds/2$ rpcgen fact.x
+shivkumar@WinDroidX:~/Desktop/ds/2$ rpcgen fact.x
+shivkumar@WinDroidX:~/Desktop/ds/2$ gcc -o server.out -DPRC_SVC_FG server.c fact_svc.c
+server.c: In function ‘fact_1_svc’:
+server.c:12:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return &temp;
+         ^
+shivkumar@WinDroidX:~/Desktop/ds/2$ gcc -o client.out client.c fact_clnt.c
+client.c:7:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main(argc, argv)
+ ^
+shivkumar@WinDroidX:~/Desktop/ds/2$ ./server.out
+
+
+
+
+
+shivkumar@WinDroidX:~/Desktop/ds/2$ ./client.out localhost
+
+Enter the number whose factorial is to be calculated: 4
+Factorial returned from server is : 24 

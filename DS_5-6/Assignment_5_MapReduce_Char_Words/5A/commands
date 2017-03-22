@@ -1,0 +1,50 @@
+➜  hadoop-2.7.2 hdfs dfs -put /home/quad/Desktop/sample6.txt input
+➜  hadoop-2.7.2 hadoop jar /home/quad/Desktop/CharCount.jar input output
+	File System Counters
+		FILE: Number of bytes read=9090
+		FILE: Number of bytes written=565436
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=110
+		HDFS: Number of bytes written=25
+		HDFS: Number of read operations=13
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=4
+	Map-Reduce Framework
+		Map input records=5
+		Map output records=50
+		Map output bytes=300
+		Map output materialized bytes=406
+		Input split bytes=102
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=5
+		Reduce shuffle bytes=406
+		Reduce input records=50
+		Reduce output records=5
+		Spilled Records=100
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=5
+		Total committed heap usage (bytes)=446693376
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=55
+	File Output Format Counters 
+		Bytes Written=25
+➜  hadoop-2.7.2 hdfs dfs -cat output/*
+16/03/27 00:18:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+a	10
+b	10
+c	10
+d	10
+e	10
+

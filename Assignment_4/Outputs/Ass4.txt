@@ -1,0 +1,32 @@
+TAB 1 :
+
+➜  4 - MPI Client Server$ ls
+MPI_client.c  MPI_server.c
+➜  4 - MPI Client Server$ mpicc MPI_server.c -o server
+➜  4 - MPI Client Server$ mpicc MPI_client.c -o client
+➜  4 - MPI Client Server$ ls
+client  MPI_client.c  MPI_server.c  server
+➜  4 - MPI Client Server$ lamboot
+
+LAM 7.1.4/MPI 2 C++/ROMIO - Indiana University
+______________________________________________________________________
+
+TAB 2 :
+
+➜  4 - MPI Client Server$ mpirun -np 1 server 
+Server running at n0:i11:323
+
+Received String : QUAD
+
+Reversed string is : DAUQ
+______________________________________________________________________
+
+TAB 3 :
+
+➜  4 - MPI Client Server$ mpirun -np 1 ./client 'n0:i11:323'
+
+Enter the string :
+QUAD
+
+Reversed string is : DAUQ
+

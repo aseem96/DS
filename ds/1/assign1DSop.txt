@@ -1,0 +1,21 @@
+shivkumar@WinDroidX:~/Desktop/ds/1$ javac Server.java 
+shivkumar@WinDroidX:~/Desktop/ds/1$ java Server 
+Server is now running.
+Listening at port 4053
+Creating thread number 1
+Client says: Hi PICT from Client 1
+Hi Client 1 from Server
+Creating thread number 2
+Client says: Hi PICT from Client 2
+
+
+shivkumar@WinDroidX:~/Desktop/ds/1$ javac Client.java 
+shivkumar@WinDroidX:~/Desktop/ds/1$ java Client
+Hi PICT from Client 1
+Server says: Echo : Hi PICT from Client 1
+
+shivkumar@WinDroidX:~/Desktop/ds/1$ java Client
+Hi PICT from Client 2
+Server says: Echo : Hi PICT from Client 2
+
+

@@ -1,0 +1,19 @@
+// Terminal 1
+
+shivkumar@WinDroidX:~/Desktop/ds/3$ javac *.java
+shivkumar@WinDroidX:~/Desktop/ds/3$ rmic ConcatRemote
+Warning: generation and use of skeletons and static stubs for JRMP
+is deprecated. Skeletons are unnecessary, and static stubs have
+been superseded by dynamically generated stubs. Users are
+encouraged to migrate away from using rmic to generate skeletons and static
+stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+shivkumar@WinDroidX:~/Desktop/ds/3$ rmiregistry 5001
+
+// Terminal 2
+
+shivkumar@WinDroidX:~/Desktop/ds/3$ java MyServer 
+
+// Terminal 3
+
+shivkumar@WinDroidX:~/Desktop/ds/3$ java Client 
+GoodMorning
